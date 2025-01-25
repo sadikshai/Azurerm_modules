@@ -56,7 +56,7 @@ variable "vm_count" {
 
 
 variable "vm_names" {
-    type = list(string)
+    type = string
   
 }
 

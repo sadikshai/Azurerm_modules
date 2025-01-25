@@ -32,7 +32,7 @@ resource "azurerm_network_interface_security_group_association" "nictonsg"{
 
 resource "azurerm_linux_virtual_machine" "web" {
     count = var.vm_count
-    name = var.vm_names[count.index]
+    name = "${var.vm_names}-${count.index}"
     resource_group_name = var.resource_group_name
     size = var.vm_size
     admin_username=var.admin_username
